@@ -3,6 +3,12 @@
 This project is a small REST API written in Go using the Gin framework.
 It supports full CRUD operations (Create, Read, Update, Delete) on albums.
 
+## Quick mental model
+
+- The API stores albums in memory using a Go slice (`albums`).
+- Each handler reads input, validates it, then returns JSON with the proper HTTP status.
+- IDs are strings; when you omit one on `POST`, the server generates a new numeric ID.
+
 ## What `main.go` does
 
 `Homework-1a/main.go` defines:
@@ -16,6 +22,28 @@ It supports full CRUD operations (Create, Read, Update, Delete) on albums.
   - `PATCH /albums/:id` update specific fields (Update)
   - `DELETE /albums/:id` remove an album (Delete)
 - Helper functions for validation, normalization, and ID generation to keep data clean and consistent.
+
+## Error handling and validation
+
+The handlers return clear error messages with appropriate status codes:
+- `400 Bad Request` for invalid JSON, missing fields, or ID mismatches.
+- `404 Not Found` when an album does not exist.
+- `409 Conflict` when creating with a duplicate ID.
+- `204 No Content` for successful deletes.
+
+Validation rules:
+- `id` is required for updates and deletes.
+- `title` and `artist` cannot be empty.
+- `price` must be greater than `0`.
+
+## Request flow (example: POST /albums)
+
+1. Read JSON body into an `album` struct.
+2. Trim whitespace in text fields.
+3. Generate an ID if missing.
+4. Check for duplicate IDs.
+5. Validate required fields and price.
+6. Append to `albums` and return the created item.
 
 ## Run
 
