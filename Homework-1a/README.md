@@ -164,3 +164,9 @@ DELETE album (error: not found)
 ```bash
 curl -s -X DELETE http://localhost:8080/albums/999
 ```
+<!-- 
+## Common questions (and short answers)
+
+- Why keep data in a slice? Simplicity for a homework API; no database setup needed.
+- Why normalize strings? It avoids whitespace-only titles or IDs with accidental spaces.
+- Why use PUT and PATCH? PUT replaces the full record; PATCH updates only the fields provided. -->

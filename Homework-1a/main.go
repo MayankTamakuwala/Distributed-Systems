@@ -34,7 +34,7 @@ func main() {
 	router.PATCH("/albums/:id", patchAlbumByID)
 	router.DELETE("/albums/:id", deleteAlbumByID)
 
-	router.Run("localhost:8080")
+	router.Run("0.0.0.0:8080")
 }
 
 // getAlbums returns the full list of albums.
