@@ -39,11 +39,43 @@ func main() {
 
 	store.products[1] = Product{
 		ProductID:    1,
-		SKU:          "TEMP",
-		Manufacturer: "TEMP",
-		CategoryID:   1,
-		Weight:       0,
-		SomeOtherID:  1,
+		SKU:          "DELL-XPS-13",
+		Manufacturer: "Dell",
+		CategoryID:   2,
+		Weight:       1200,
+		SomeOtherID:  101,
+	}
+	store.products[2] = Product{
+		ProductID:    2,
+		SKU:          "SONY-WH1000XM4",
+		Manufacturer: "Sony",
+		CategoryID:   3,
+		Weight:       250,
+		SomeOtherID:  102,
+	}
+	store.products[3] = Product{
+		ProductID:    3,
+		SKU:          "LOGITECH-MX-MASTER",
+		Manufacturer: "Logitech",
+		CategoryID:   4,
+		Weight:       135,
+		SomeOtherID:  103,
+	}
+	store.products[4] = Product{
+		ProductID:    4,
+		SKU:          "SAMSUNG-970-EVO",
+		Manufacturer: "Samsung",
+		CategoryID:   5,
+		Weight:       6,
+		SomeOtherID:  104,
+	}
+	store.products[5] = Product{
+		ProductID:    5,
+		SKU:          "CORSAIR-K95-RGB",
+		Manufacturer: "Corsair",
+		CategoryID:   4,
+		Weight:       1050,
+		SomeOtherID:  105,
 	}
 
 	router := gin.Default()
