@@ -123,7 +123,7 @@ All screenshots are located in:
 
 GET `http://localhost:8080/products/1`
 
-![GET 200](screenshots/GET%20200.png)
+![GET 200](screenshots/Part%202/GET%20200.png)
 
 ---
 
@@ -142,7 +142,7 @@ POST `http://localhost:8080/products/1/details`
 }
 ```
 
-![POST 204](screenshots/POST%20204.png)
+![POST 204](screenshots/Part%202/POST%20204.png)
 
 ---
 
@@ -161,7 +161,7 @@ POST with invalid body:
 }
 ```
 
-![POST 400](screenshots/POST%20400.png)
+![POST 400](screenshots/Part%202/POST%20400.png)
 
 ---
 
@@ -169,7 +169,7 @@ POST with invalid body:
 
 GET `http://localhost:8080/products/999`
 
-![GET 404](screenshots/GET%20404.png)
+![GET 404](screenshots/Part%202/GET%20404.png)
 
 ---
 
